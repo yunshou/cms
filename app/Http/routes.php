@@ -11,30 +11,34 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
-Route::get('/about', function () {
-    return "HI~ This about page";
-});
+// Route::get('/about', function () {
+//     return "HI~ This about page";
+// });
 
 
-Route::get('/contact', function () {
-    return "HI~ I am contact ";
-});
+// Route::get('/contact', function () {
+//     return "HI~ I am contact ";
+// });
 
 
-Route::get('/post/{id}/{name}', function ($id,$name) {
-    return "HI~ This number".$id."".$name;
-});
+// Route::get('/post/{id}/{name}', function ($id,$name) {
+//     return "HI~ This number".$id."".$name;
+// });
 
-Route::get('admin/posts/example',array('as'=>'admin.home' ,function(){
+// Route::get('admin/posts/example',array('as'=>'admin.home' ,function(){
 
-    $url = route('admin.home');  
+//     $url = route('admin.home');  
 
-    return "this url is". $url;
+//     return "this url is". $url;
 
-}));
+// }));
+
+// Route::get('/post/{id}','PostsController@index');
+
+Route::resource('posts','PostsController');
 
